@@ -50,8 +50,20 @@ module Guessr
       end
     end
 
+# Scoreboard option allows user to view scoreboard after login 
+# Users are ranked from highest score to lowest
+# binding.pry
+    def view_scoreboard
+      puts "Guesser Champions"
+      puts "Player  Score"
+      Guessr::Player.order(score: :desc).each do |player| puts "#{player.name} -- #{player.score}"
+      end
+      puts
+    end
+# binding.pry
     def run
       welcome
+      view_scoreboard
       choose_player
       while play_again?
         choose_game

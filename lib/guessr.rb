@@ -41,6 +41,10 @@ module Guessr
       end
     end
 
+# User's score increases when they win a game
+# Points for winning game: 100 - (10 * number of turns after the first)
+# User's score is cumulative across games
+
     def turn(guess)
       self.update(last_guess: guess.to_i,
                   guess_count: self.guess_count + 1)
@@ -51,6 +55,10 @@ module Guessr
       else
         puts "You win!"
         self.update(finished: true)
+        # binding.pry
+        turn_score = self.player.score
+        final_score = 100 - (10 * self.guess_count)
+        self.player.update(score: final_score + turn_score)
       end
     end
   end
