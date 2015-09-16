@@ -1,31 +1,7 @@
-# Guessr
+`Number Guessing Game`
 
-TODO: Write a gem description
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'guessr'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install guessr
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/guessr/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+ - A player is prompted to enter a number guess between 1 and 100
+ - A player is prompted to enter a number guess between 1 and 100. 
+ - If the guess is incorrect, the game presents a message telling them if
+   they guessed too low or too high. 
+ - If the player guesses correctly, the game presents a message congratulating the user, and the user exits.
